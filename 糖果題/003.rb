@@ -5,9 +5,10 @@
 list = [false, 1, 0, -1, 2, 0, 1, 3, "a"]
 
 def moveZerosToEnd(arr) 
- p arr.select{|x|x == 0}
- p arr
+ (arr.select{|x|x != 0})+(arr.select{|x|x == 0})
 end
 
 result = moveZerosToEnd(list)
-puts result # 印出 [false, 1, -1, 2, 1, 3, "a", 0, 0]
+p result # 印出 [false, 1, -1, 2, 1, 3, "a", 0, 0]
+
+#分開是0 、不是0的陣列，再重新併起來
